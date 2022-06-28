@@ -214,48 +214,48 @@ function generateTable(testSubjectDemos) {
   body.appendChild(tbl);
 }
 
-// function gaugeChart(wfreq) {
-//   var data = [
-//     {
-//       domain: { x: [0, 1], y: [0, 1] },
-//       value: wfreq,
-//       title: { text: "Weekly Washing Frequency" },
-//       type: "indicator",
-//       mode: "gauge+number",
-//       gauge: {
-//         axis: { range: [null, 9], tickwidth: 1, tickcolor: "#000082" },
-//         steps: [
-//           { range: [0, 1], color: "#fff4ed" },
-//           { range: [1, 2], color: "#ffddc6" },
-//           { range: [2, 3], color: "#ffc59f" },
-//           { range: [3, 4], color: "#ffae78" },
-//           { range: [4, 5], color: "#ff9650" },
-//           { range: [5, 6], color: "#ff7e29" },
-//           { range: [6, 7], color: "#ff6702" },
-//           { range: [7, 8], color: "#ed5f00" },
-//           { range: [8, 9], color: "#c64800" },
-//         ],
-//         threshold: {
-//           line: { color: "red", width: 4 },
-//           thickness: 0.75,
-//           value: 490,
-//         },
-//       },
-//     },
-//   ];
+function gaugeChart(wfreq) {
+  var data = [
+    {
+      domain: { x: [0, 1], y: [0, 1] },
+      value: wfreq,
+      title: { text: "Weekly Washing Frequency" },
+      type: "indicator",
+      mode: "gauge+number",
+      gauge: {
+        axis: { range: [null, 9], tickwidth: 1, tickcolor: "#000082" },
+        steps: [
+          { range: [0, 1], color: "#fff4ed" },
+          { range: [1, 2], color: "#ffddc6" },
+          { range: [2, 3], color: "#ffc59f" },
+          { range: [3, 4], color: "#ffae78" },
+          { range: [4, 5], color: "#ff9650" },
+          { range: [5, 6], color: "#ff7e29" },
+          { range: [6, 7], color: "#ff6702" },
+          { range: [7, 8], color: "#ed5f00" },
+          { range: [8, 9], color: "#c64800" },
+        ],
+        threshold: {
+          line: { color: "red", width: 4 },
+          thickness: 0.75,
+          value: 490,
+        },
+      },
+    },
+  ];
 
-//   var layout = { width: 300, height: 225, margin: { t: 0, b: 0 } };
-//   Plotly.newPlot("gauge", data, layout);
-// }
+  var layout = { width: 300, height: 225, margin: { t: 0, b: 0 } };
+  Plotly.newPlot("gauge", data, layout);
+}
 
-// init();
+init();
 
-// d3.selectAll("#selDataset").on("change", subjectChanged);
+d3.selectAll("#selDataset").on("change", subjectChanged);
 
-// function subjectChanged() {
-//   let selectedID = d3.select("#selDataset").node().value;
+function subjectChanged() {
+  let selectedID = d3.select("#selDataset").node().value;
 
-//   d3.selectAll("#table").remove();
+  d3.selectAll("#table").remove();
 
-//   datapull(selectedID);
-// }
+  datapull(selectedID);
+}
